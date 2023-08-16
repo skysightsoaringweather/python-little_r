@@ -149,6 +149,7 @@ class Record:
         self.height = height
 
         self.measurements = {
+            'pressure': None,
             'temperature': None,
             'dewpoint': None,
             'wind_speed': None,
@@ -198,7 +199,7 @@ class Record:
         '''
 
         data = [
-            None, 0,    # Pressure (Pa) of observation, and QC
+            self.measurements['pressure'], 0,    # Pressure (Pa) of observation, and QC
             self.height, 0,    # Height (m MSL) of observation, and QC
             self.measurements['temperature'], 0,    # Temperature (K) and QC
             self.measurements['dewpoint'], 0,    # Dewpoint (K) and QC
@@ -240,9 +241,9 @@ class Record:
             self.lat,  #                   station latitude (north positive)
             self.lon,  #                   station longitude (east positive)
             self.station_name,  #                   string1 ID of station
-            'Station name',  #                   string2 Name of station
-            'FM-12 SYNOP',  #                   string3 Description of the measurement device
-            'String 4',  #                   string4 GTS, NCAR/ADP, BOGUS, etc.
+            self.station_name,  #                   string2 Name of station
+            'FM-12',  #                   string3 Description of the measurement device
+            'GTS',  #                   string4 GTS, NCAR/ADP, BOGUS, etc.
             self.height,  #                   terrain elevation (m) --> 1f20.5
             6,     #                   Number of valid fields in the report (kx*6)
             0,     #                   Number of errors encountered during the decoding of this observation (0)
