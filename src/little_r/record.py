@@ -297,4 +297,4 @@ class Record:
             self.data_closing_line(),
             self.end_of_message_line()]
 
-        return '\n'.join(output) + '\n'
+        return '\n'.join(output)
