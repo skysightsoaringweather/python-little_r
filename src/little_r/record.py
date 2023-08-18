@@ -242,8 +242,7 @@ class Record:
             self.lon,  #                   station longitude (east positive)
             self.station_name + (' ' * 40),  #                   string1 ID of station
             self.station_name + (' ' * 40),  #                   string2 Name of station
-            'FM-12 SYNOP' + (' ' * 40),  #                   string3 Description of the measurement devic
-e
+            'FM-12 SYNOP' + (' ' * 40),  #                   string3 Description of the measurement device
             'GTS' + (' ' * 40),  #                   string4 GTS, NCAR/ADP, BOGUS, etc. 
             self.height,  #                   terrain elevation (m) --> 1f20.5
             6,     #                   Number of valid fields in the report (kx*6)
