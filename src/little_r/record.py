@@ -264,7 +264,7 @@ class Record:
             0,
             None,  #                   4. Sea-Surface Temperature (K) and QC
             0,
-            None,  #                   5. Surface pressure (Pa) and QC
+            self.measurements.get('pressure'),  #                   5. Surface pressure (Pa) and QC
             0,
             None,  #                   6. Precipitation Accumulation and QC
             0,
